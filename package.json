@@ -1,8 +1,45 @@
 {
-  "name": "web-safety-big-project",
+  "name": "web-safety-big-project-frontend",
+  "description": "Big project of Web-Safety",
+  "keywords": [
+    "web-safety",
+    "big-project"
+  ],
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
   "type": "module",
+  "author": {
+    "name": "skyclouds2001",
+    "email": "skyclouds2001@163.com",
+    "url": "https://skyclouds2001.github.io/"
+  },
+  "contributors": [
+    "skyclouds2001"
+  ],
+  "homepage": "https://github.com/skyclouds2001/web-safety-big-project-frontend#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skyclouds2001/web-safety-big-project-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skyclouds2001/web-safety-big-project-frontend/issues",
+    "email": "skyclouds2001@163.com"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "os": [
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "ia32",
+    "arm",
+    "mips"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
