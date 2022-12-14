@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [vue(), vueJsx(), ElementPlus(), eslint()],
   css: {
     postcss: '.postcssrc',
+    devSourcemap: true,
   },
   resolve: {
     alias: {
