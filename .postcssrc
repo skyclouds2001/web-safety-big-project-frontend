@@ -1,7 +1,0 @@
-{
-  "parser": "sugarss",
-  "plugins": {
-    "autoprefixer": {},
-    "tailwindcss": {}
-  }
-}

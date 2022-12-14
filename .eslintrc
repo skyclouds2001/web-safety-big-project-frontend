@@ -3,14 +3,16 @@
   "env": {
     "browser": true,
     "es2021": true,
-    "node": true
+    "node": true,
+    "commonjs": true
   },
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:vue/vue3-recommended",
+    "plugin:@typescript-eslint/recommended",
     "standard-with-typescript",
-    "prettier"
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "overrides": [
   ],
@@ -19,7 +21,12 @@
     "parser": "@typescript-eslint/parser",
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "tsconfig.json"
+    "project": ["tsconfig.json"],
+    "tsconfigRootDir": ".",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "extraFileExtensions": [".vue"]
   },
   "plugins": [
     "vue",
