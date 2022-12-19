@@ -16,11 +16,11 @@ export default createRouter({
           component: async () => await import('@/views/RegisterPage.vue'),
         },
         {
-          path: 'scenery-spot',
+          path: '/scenery-spot',
           component: async () => await import('@/views/ScenerySpotManage.vue'),
         },
         {
-          path: 'ticket',
+          path: '/ticket',
           component: async () => await import('@/views/TicketManage.vue'),
         },
         {
