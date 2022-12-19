@@ -1,6 +1,8 @@
 <template>
   <el-container>
-    <el-aside>Aside</el-aside>
+    <el-aside>
+      <SideBar />
+    </el-aside>
     <el-container>
       <el-header>Header</el-header>
       <el-main>
@@ -12,7 +14,8 @@
 </template>
 
 <script setup>
-import { ElContainer, ElMain, ElHeader, ElFooter } from 'element-plus'
+import { ElContainer, ElMain, ElHeader, ElFooter, ElAside } from 'element-plus'
+import SideBar from '@/components/SideBar.vue'
 </script>
 
 <style scoped></style>
