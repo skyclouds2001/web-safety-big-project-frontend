@@ -64,13 +64,6 @@ button:focus-visible {
   padding: 2em;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -82,4 +75,12 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#app {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
