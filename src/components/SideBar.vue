@@ -1,5 +1,5 @@
 <template>
-  <el-menu router>
+  <el-menu class="menu" router>
     <el-menu-item index="/scenery-spot">
       <span>景点管理</span>
     </el-menu-item>
@@ -15,8 +15,13 @@
   </el-menu>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ElMenu, ElMenuItem } from 'element-plus'
 </script>
 
-<style scoped></style>
+<style lang="less" scoped>
+.menu {
+  width: 100%;
+  height: 100%;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <el-page-header title="返回" :content="title" @back="handleBack" />
+  <el-page-header class="header" title="返回" :content="title" @back="handleBack" />
 </template>
 
 <script lang="ts" setup>
@@ -18,4 +18,13 @@ const handleBack = () => {
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.header {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+</style>
