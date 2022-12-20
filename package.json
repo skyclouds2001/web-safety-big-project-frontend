@@ -8,7 +8,6 @@
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
-  "type": "module",
   "author": {
     "name": "skyclouds2001",
     "email": "skyclouds2001@163.com",
