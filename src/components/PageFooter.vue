@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">CopyRight@skyclouds2001 2022-2023</div>
+  <div class="footer">CopyRight@skyclouds2001 2001-2022</div>
 </template>
 
 <script lang="ts" setup></script>
