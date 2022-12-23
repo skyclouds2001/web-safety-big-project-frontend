@@ -22,6 +22,9 @@ import { ElContainer, ElMain, ElHeader, ElFooter, ElAside } from 'element-plus'
 import PageHeader from '@/components/PageHeader.vue'
 import SideBar from '@/components/SideBar.vue'
 import PageFooter from '@/components/PageFooter.vue'
+import titleStore from '@/store/title'
+
+titleStore.updateTitle('')
 </script>
 
 <style lang="less" scoped>
