@@ -12,7 +12,6 @@
           <router-view></router-view>
         </el-main>
         <el-footer class="footer">
-          <div class="bg-blue-900 w-10 h-2"></div>
           <PageFooter />
         </el-footer>
       </el-container>
