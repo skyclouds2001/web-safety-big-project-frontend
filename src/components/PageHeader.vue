@@ -24,7 +24,7 @@ const handleBack = () => {
   height: 100%;
 
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 </style>
