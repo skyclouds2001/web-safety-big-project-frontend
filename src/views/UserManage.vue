@@ -2,10 +2,6 @@
   <div>user</div>
 </template>
 
-<script>
-export default {
-  name: 'UserManage',
-}
-</script>
+<script lang="ts" setup></script>
 
-<style scoped></style>
+<style lang="less" scoped></style>

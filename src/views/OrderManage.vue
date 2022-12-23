@@ -2,10 +2,6 @@
   <div>order</div>
 </template>
 
-<script>
-export default {
-  name: 'OrderManage',
-}
-</script>
+<script lang="ts" setup></script>
 
-<style scoped></style>
+<style lang="less" scoped></style>

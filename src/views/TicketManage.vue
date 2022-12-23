@@ -2,10 +2,6 @@
   <div>ticket</div>
 </template>
 
-<script>
-export default {
-  name: 'TicketManage',
-}
-</script>
+<script lang="ts" setup></script>
 
-<style scoped></style>
+<style lang="less" scoped></style>
