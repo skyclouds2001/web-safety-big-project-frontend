@@ -8,7 +8,7 @@ import eslint from 'vite-plugin-eslint'
 export default defineConfig({
   plugins: [vue(), vueJsx(), ElementPlus(), eslint()],
   css: {
-    postcss: '.postcssrc',
+    postcss: 'postcss.config.js',
     devSourcemap: true,
   },
   resolve: {

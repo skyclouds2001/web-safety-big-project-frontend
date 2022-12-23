@@ -18,6 +18,6 @@
       ]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/App.vue", "src/main.ts", "vite.config.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/App.vue", "src/main.ts", "vite.config.ts", "postcss.config.js", "tailwind.config.js"],
   "exclude": ["node_modules"]
 }
