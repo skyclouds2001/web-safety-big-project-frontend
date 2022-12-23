@@ -20,5 +20,6 @@ export default defineConfig({
     host: 'localhost',
     port: 8000,
     strictPort: true,
+    open: true,
   },
 })
