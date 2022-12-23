@@ -1,24 +1,28 @@
 <template>
-  <el-container class="container">
-    <el-aside>
-      <SideBar />
-    </el-aside>
-    <el-container class="section">
-      <el-header class="header">
-        <PageHeader />
-      </el-header>
-      <el-main class="content">
-        <router-view></router-view>
-      </el-main>
-      <el-footer class="footer">
-        <PageFooter />
-      </el-footer>
+  <el-config-provider :locale="zhCn">
+    <el-container class="container">
+      <el-aside>
+        <SideBar />
+      </el-aside>
+      <el-container class="section">
+        <el-header class="header">
+          <PageHeader />
+        </el-header>
+        <el-main class="content">
+          <router-view></router-view>
+        </el-main>
+        <el-footer class="footer">
+          <div class="bg-blue-900 w-10 h-2"></div>
+          <PageFooter />
+        </el-footer>
+      </el-container>
     </el-container>
-  </el-container>
+  </el-config-provider>
 </template>
 
 <script lang="ts" setup>
-import { ElContainer, ElMain, ElHeader, ElFooter, ElAside } from 'element-plus'
+import { ElConfigProvider, ElContainer, ElMain, ElHeader, ElFooter, ElAside } from 'element-plus'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import PageHeader from '@/components/PageHeader.vue'
 import SideBar from '@/components/SideBar.vue'
 import PageFooter from '@/components/PageFooter.vue'
