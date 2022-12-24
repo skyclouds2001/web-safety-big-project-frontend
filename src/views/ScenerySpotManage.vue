@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import { ref, onBeforeMount } from 'vue'
 import { ElTable, ElTableColumn, ElButton, ElScrollbar, ElMessageBox } from 'element-plus'
-import { getAllScenerySpot, addScenerySpot as addScenerySpotApi, updateScenerySpot, removeScenerySpot as removeScenerySpotApi } from '@/api/scenery_spot'
+import { getAllScenerySpot, addScenerySpot as addScenerySpotApi, updateScenerySpot as updateScenerySpotApi, removeScenerySpot as removeScenerySpotApi } from '@/api/scenery_spot'
 import titleStore from '@/store/title'
 import ScenerySpotForm from '@/components/ScenerySpotForm.vue'
 import type ScenerySpot from '@/model/ScenerySpot'
@@ -67,7 +67,7 @@ const addScenerySpot = async (spot: ScenerySpot) => {
 
 const editScenerySpot = async (spot: ScenerySpot) => {
   try {
-    const res = await updateScenerySpot(spot)
+    const res = await updateScenerySpotApi(spot)
     if (res.success) {
       SuccessMessage('更新成功')
       el.value?.hide()
