@@ -19,7 +19,7 @@
       <el-table-column align="center" prop="desc" label="个人简介" width="300" />
       <el-table-column align="center" prop="createTimestamp" label="创建时间" width="100" />
       <el-table-column align="center" prop="updateTimestamp" label="更新时间" width="100" />
-      <el-table-column align="center" label="操作" width="200">
+      <el-table-column align="center" label="操作" width="200" fixed="right">
         <template #default="scope">
           <el-button type="primary" text @click="el?.show('update', scope.row)">编辑</el-button>
           <el-button type="danger" text @click="removeUser(scope.row)">删除</el-button>

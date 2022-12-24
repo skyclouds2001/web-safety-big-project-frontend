@@ -10,7 +10,7 @@
       <el-table-column align="center" prop="note" label="订单备注" width="300" />
       <el-table-column align="center" prop="createTimestamp" label="创建时间" width="100" />
       <el-table-column align="center" prop="updateTimestamp" label="更新时间" width="100" />
-      <el-table-column align="center" label="操作" width="100">
+      <el-table-column align="center" label="操作" width="100" fixed="right">
         <template #default="scope">
           <el-button type="danger" text @click="removeOrder(scope.row)">删除</el-button>
         </template>

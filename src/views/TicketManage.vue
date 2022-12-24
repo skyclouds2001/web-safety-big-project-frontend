@@ -13,7 +13,7 @@
       <el-table-column align="center" prop="scenerySpotId" label="门票" width="100" />
       <el-table-column align="center" prop="createTimestamp" label="创建时间" width="100" />
       <el-table-column align="center" prop="updateTimestamp" label="更新时间" width="100" />
-      <el-table-column align="center" label="操作" width="200">
+      <el-table-column align="center" label="操作" width="200" fixed="right">
         <template #default="scope">
           <el-button type="primary" text @click="el?.show('update', scope.row)">编辑</el-button>
           <el-button type="danger" text @click="removeTicket(scope.row)">删除</el-button>
