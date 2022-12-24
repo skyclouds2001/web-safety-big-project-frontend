@@ -20,7 +20,7 @@
     </el-table>
   </el-scrollbar>
 
-  <ScenerySpotInfo ref="el" @save="addScenerySpot" @update="editScenerySpot" />
+  <ScenerySpotForm ref="el" @save="addScenerySpot" @update="editScenerySpot" />
 </template>
 
 <script lang="ts" setup>
@@ -28,7 +28,7 @@ import { ref, onBeforeMount } from 'vue'
 import { ElTable, ElTableColumn, ElButton, ElScrollbar, ElMessageBox } from 'element-plus'
 import { getAllScenerySpot, addScenerySpot as addScenerySpotApi, updateScenerySpot, removeScenerySpot as removeScenerySpotApi } from '@/api/scenery_spot'
 import titleStore from '@/store/title'
-import ScenerySpotInfo from '@/components/ScenerySpotForm.vue'
+import ScenerySpotForm from '@/components/ScenerySpotForm.vue'
 import type ScenerySpot from '@/model/ScenerySpot'
 import { ErrorMessage, InfoMessage, SuccessMessage } from '@/util/Message'
 
@@ -38,7 +38,7 @@ onBeforeMount(() => loadScenerySpots())
 
 const scenerySpots = ref<ScenerySpot[]>([])
 
-const el = ref<InstanceType<typeof ScenerySpotInfo> | null>(null)
+const el = ref<InstanceType<typeof ScenerySpotForm> | null>(null)
 
 const loadScenerySpots = async () => {
   const res = await getAllScenerySpot()

@@ -24,7 +24,7 @@ import { ElForm, ElFormItem, ElInput, ElDialog, ElButton } from 'element-plus'
 import type ScenerySpot from '@/model/ScenerySpot'
 
 export default defineComponent({
-  name: 'ScenerySpotInfo',
+  name: 'ScenerySpotForm',
   components: {
     ElForm,
     ElFormItem,
