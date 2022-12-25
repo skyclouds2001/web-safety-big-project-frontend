@@ -18,6 +18,6 @@
       ]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/App.vue", "src/main.ts", "vite.config.ts", "prettier.config.js", "stylelint.config.js", "postcss.config.js", "tailwind.config.js", "commitlint.config.js"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/App.vue", "src/main.ts", "vite.config.ts", "prettier.config.js", "stylelint.config.js", "postcss.config.js", "tailwind.config.js", "commitlint.config.js", "lint-staged.config.js"],
   "exclude": ["node_modules"]
 }
