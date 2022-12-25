@@ -4,17 +4,17 @@ export default createRouter({
   history: createWebHistory(),
   routes: [
     {
+      path: '/login',
+      component: async () => await import('@/views/LoginPage.vue'),
+    },
+    {
+      path: '/register',
+      component: async () => await import('@/views/RegisterPage.vue'),
+    },
+    {
       path: '/',
       component: async () => await import('@/views/BasePage.vue'),
       children: [
-        {
-          path: '/login',
-          component: async () => await import('@/views/LoginPage.vue'),
-        },
-        {
-          path: '/register',
-          component: async () => await import('@/views/RegisterPage.vue'),
-        },
         {
           path: '/scenery-spot',
           component: async () => await import('@/views/ScenerySpotManage.vue'),
