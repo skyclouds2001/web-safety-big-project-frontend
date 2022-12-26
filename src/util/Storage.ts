@@ -20,9 +20,13 @@ const transform = (v: unknown): string => {
   }
 }
 
+const reTransform = (v: string | null): any => {
+  return v !== null ? JSON.parse(v) : v
+}
+
 export default {
   get: (key: string): string | null => {
-    return storage.getItem(key)
+    return reTransform(storage.getItem(key))
   },
   set: (key: string, value: unknown): void => {
     storage.setItem(key, transform(value))
