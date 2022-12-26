@@ -31,7 +31,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { ElForm, ElFormItem, ElInput, ElInputNumber, ElDialog, ElButton, ElSelect, ElOption } from 'element-plus'
-import { getAllScenerySpot } from '@/api/scenery_spot'
+import { getAllScenerySpot } from '@/api'
 import { ErrorMessage } from '@/util/Message'
 import { type as ticketTypes } from '@/data/ticket'
 import type ScenerySpot from '@/model/ScenerySpot'

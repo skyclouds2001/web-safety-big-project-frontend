@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import { ref, onBeforeMount } from 'vue'
 import { ElTable, ElTableColumn, ElButton, ElScrollbar, ElMessageBox } from 'element-plus'
-import { getAllScenerySpot, addScenerySpot as addScenerySpotApi, updateScenerySpot as updateScenerySpotApi, removeScenerySpot as removeScenerySpotApi } from '@/api/scenery_spot'
+import { getAllScenerySpot, addScenerySpot as addScenerySpotApi, updateScenerySpot as updateScenerySpotApi, removeScenerySpot as removeScenerySpotApi } from '@/api'
 import titleStore from '@/store/title'
 import ScenerySpotForm from '@/components/ScenerySpotForm.vue'
 import type ScenerySpot from '@/model/ScenerySpot'

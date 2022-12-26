@@ -34,7 +34,7 @@
 <script lang="ts" setup>
 import { ref, onBeforeMount } from 'vue'
 import { ElTable, ElTableColumn, ElButton, ElScrollbar, ElMessageBox } from 'element-plus'
-import { getAllUser, addUser as addUserApi, updateUser as updateUserApi, removeUser as removeUserApi } from '@/api/user'
+import { getAllUser, addUser as addUserApi, updateUser as updateUserApi, removeUser as removeUserApi } from '@/api'
 import UserForm from '@/components/UserForm.vue'
 import type User from '@/model/User'
 import titleStore from '@/store/title'

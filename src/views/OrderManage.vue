@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 import { ref, onBeforeMount } from 'vue'
 import { ElTable, ElTableColumn, ElButton, ElScrollbar, ElMessageBox } from 'element-plus'
-import { getAllOrder, removeOrder as removeOrderApi } from '@/api/order'
+import { getAllOrder, removeOrder as removeOrderApi } from '@/api'
 import type Order from '@/model/Order'
 import titleStore from '@/store/title'
 import { ErrorMessage, InfoMessage, SuccessMessage } from '@/util/Message'

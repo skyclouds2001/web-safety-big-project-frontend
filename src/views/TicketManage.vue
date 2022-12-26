@@ -28,7 +28,7 @@
 <script lang="ts" setup>
 import { ref, onBeforeMount } from 'vue'
 import { ElTable, ElTableColumn, ElButton, ElScrollbar, ElMessageBox } from 'element-plus'
-import { getAllTicket, addTicket as addTicketApi, updateTicket as updateTicketApi, removeTicket as removeTicketApi } from '@/api/ticket'
+import { getAllTicket, addTicket as addTicketApi, updateTicket as updateTicketApi, removeTicket as removeTicketApi } from '@/api'
 import TicketForm from '@/components/TicketForm.vue'
 import titleStore from '@/store/title'
 import { ErrorMessage, InfoMessage, SuccessMessage } from '@/util/Message'
