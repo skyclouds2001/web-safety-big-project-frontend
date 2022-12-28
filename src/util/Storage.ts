@@ -21,7 +21,11 @@ const transform = (v: unknown): string => {
 }
 
 const reTransform = (v: string | null): any => {
-  return v !== null ? JSON.parse(v) : v
+  try {
+    return v !== null ? JSON.parse(v) : v
+  } catch {
+    return v
+  }
 }
 
 export default {
