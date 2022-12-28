@@ -8,8 +8,8 @@
           </el-icon>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item>重设密码</el-dropdown-item>
-              <el-dropdown-item>退出登录</el-dropdown-item>
+              <el-dropdown-item @click="reset">重设密码</el-dropdown-item>
+              <el-dropdown-item @click="exit">退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </template>
         </el-dropdown>
@@ -21,9 +21,11 @@
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
-import { ElPageHeader, ElIcon, ElDropdown, ElDropdownMenu, ElDropdownItem } from 'element-plus'
+import { ElPageHeader, ElIcon, ElDropdown, ElDropdownMenu, ElDropdownItem, ElMessageBox } from 'element-plus'
 import { UserFilled } from '@element-plus/icons-vue'
 import titleStore from '@/store/title'
+import { SuccessMessage, InfoMessage } from '@/util/Message'
+import Storage from '@/util/Storage'
 
 const router = useRouter()
 
@@ -31,6 +33,24 @@ const { title } = storeToRefs(titleStore)
 
 const handleBack = () => {
   router.push('/')
+}
+
+const reset = () => {
+  console.log('reset')
+}
+
+const exit = () => {
+  ElMessageBox.confirm('确认退出登录？')
+    .then(() => {
+      Storage.remove('token')
+      SuccessMessage('成功')
+      setTimeout(() => {
+        router.push('/login')
+      }, 1500)
+    })
+    .catch(() => {
+      InfoMessage('取消')
+    })
 }
 </script>
 
