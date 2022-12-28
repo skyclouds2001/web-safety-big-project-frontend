@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { SERVER_HOST } from '@/config'
+import router from '@/router'
 import Storage from '@/util/Storage'
 
 const instance = axios.create({
@@ -21,7 +22,14 @@ instance.interceptors.request.use(
 )
 
 instance.interceptors.response.use(
-  result => result,
+  result => {
+    if (result.data.code === 40000) {
+      setTimeout(() => {
+        void router.push('/login')
+      }, 1500)
+    }
+    return result
+  },
   async error => await Promise.reject(error)
 )
 
