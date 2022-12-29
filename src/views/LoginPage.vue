@@ -30,12 +30,16 @@ const admin = reactive({
 })
 
 const handleLogin = async () => {
-  const res = await useLogin(admin.user, admin.pwd)
-  if (res.success) {
-    Storage.set('token', res.data)
-    await router.push('/scenery-spot')
-  } else {
-    ErrorMessage(res.message)
+  try {
+    const res = await useLogin(admin.user, admin.pwd)
+    if (res.success) {
+      Storage.set('token', res.data)
+      await router.push('/scenery-spot')
+    } else {
+      ErrorMessage(res.message)
+    }
+  } catch {
+    ErrorMessage('登录失败')
   }
 }
 </script>
