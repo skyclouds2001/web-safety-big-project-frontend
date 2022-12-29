@@ -1,6 +1,9 @@
 <template>
   <div class="w-screen h-auto flex justify-center items-center bg-gray-100" style="min-height: 100vh">
     <el-form label-width="100px" hide-required-asterisk class="w-[30rem] h-auto px-10 py-5 mx-0 my-5 shadow rounded bg-white">
+      <div>
+        <div class="text-2xl text-center font-bold leading-8 mb-5">注册</div>
+      </div>
       <el-form-item label="用户姓名" required>
         <el-input v-model="user.name" name="name" />
       </el-form-item>
@@ -38,10 +41,10 @@
           <el-option v-for="item in userTypes" :key="item.value" :label="item.label" :value="item.value" />
         </el-select>
       </el-form-item>
-      <el-form-item>
-        <el-button type="warning" @click="cancel">取消</el-button>
+      <div>
+        <el-button type="warning" @click="cancel">返回</el-button>
         <el-button type="primary" @click="confirm">注册</el-button>
-      </el-form-item>
+      </div>
     </el-form>
   </div>
 </template>
@@ -54,6 +57,8 @@ import { addUser } from '@/api'
 import { sex as userSexes, type as userTypes } from '@/data/user'
 import type User from '@/model/User'
 import { ErrorMessage, SuccessMessage } from '@/util/Message'
+
+const router = useRouter()
 
 const user = reactive<Omit<User, 'id' | 'createTimestamp' | 'updateTimestamp'>>({
   name: '',
@@ -70,7 +75,7 @@ const user = reactive<Omit<User, 'id' | 'createTimestamp' | 'updateTimestamp'>>(
 })
 
 const cancel = () => {
-  setTimeout(() => useRouter().push('/'), 1000)
+  setTimeout(() => router.push('/login'), 1000)
 }
 
 const confirm = async () => {
@@ -78,6 +83,7 @@ const confirm = async () => {
     const res = await addUser(user as User)
     if (res.success) {
       SuccessMessage('注册成功')
+      setTimeout(() => useRouter().push('/login'), 3000)
     } else {
       ErrorMessage(res.message)
     }
