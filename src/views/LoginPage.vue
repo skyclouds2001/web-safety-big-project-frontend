@@ -1,10 +1,10 @@
 <template>
   <div class="w-screen h-screen flex justify-center items-center bg-gray-100">
-    <el-form :model="admin" class="w-[18rem] h-[12rem] px-2.5 py-10 shadow rounded bg-white">
-      <el-form-item label="账号">
+    <el-form :model="admin" hide-required-asterisk class="w-[18rem] h-[12rem] px-2.5 py-10 shadow rounded bg-white">
+      <el-form-item label="账号" required>
         <el-input v-model="admin.user" name="user" />
       </el-form-item>
-      <el-form-item label="密码">
+      <el-form-item label="密码" required>
         <el-input v-model="admin.pwd" name="password" show-password clearable />
       </el-form-item>
       <el-form-item>
