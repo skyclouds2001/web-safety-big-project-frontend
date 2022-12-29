@@ -32,6 +32,7 @@ const router = useRouter()
 const { title } = storeToRefs(titleStore)
 
 const handleBack = () => {
+  titleStore.updateTitle('')
   router.push('/')
 }
 
