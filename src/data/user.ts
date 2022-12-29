@@ -1,4 +1,4 @@
-export const sex: Array<{
+const userSexes: Array<{
   label: string
   value: number
 }> = [
@@ -16,7 +16,7 @@ export const sex: Array<{
   },
 ]
 
-export const type: Array<{
+const userTypes: Array<{
   label: string
   value: number
 }> = [
@@ -29,3 +29,5 @@ export const type: Array<{
     value: 1,
   },
 ]
+
+export { userTypes, userSexes }

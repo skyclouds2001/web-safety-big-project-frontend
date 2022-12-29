@@ -1,4 +1,4 @@
-export const type: Array<{
+const ticketTypes: Array<{
   label: string
   value: number
 }> = [
@@ -15,3 +15,5 @@ export const type: Array<{
     value: 2,
   },
 ]
+
+export { ticketTypes }

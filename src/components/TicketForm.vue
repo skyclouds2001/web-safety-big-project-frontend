@@ -33,7 +33,7 @@ import { defineComponent } from 'vue'
 import { ElForm, ElFormItem, ElInput, ElInputNumber, ElDialog, ElButton, ElSelect, ElOption } from 'element-plus'
 import { getAllScenerySpot } from '@/api'
 import { ErrorMessage } from '@/util/Message'
-import { type as ticketTypes } from '@/data/ticket'
+import { ticketTypes } from '@/data'
 import type ScenerySpot from '@/model/ScenerySpot'
 import type Ticket from '@/model/Ticket'
 

@@ -49,7 +49,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { ElForm, ElFormItem, ElInput, ElDialog, ElButton, ElSelect, ElOption } from 'element-plus'
-import { sex as userSexes, type as userTypes } from '@/data/user'
+import { userSexes, userTypes } from '@/data'
 import type User from '@/model/User'
 
 export default defineComponent({
