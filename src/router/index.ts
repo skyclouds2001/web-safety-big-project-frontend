@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Storage from '@/util/Storage'
 
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
@@ -14,6 +15,7 @@ export default createRouter({
     {
       path: '/',
       component: async () => await import('@/views/BasePage.vue'),
+      redirect: '/login',
       children: [
         {
           path: '/scenery-spot',
@@ -35,3 +37,13 @@ export default createRouter({
     },
   ],
 })
+
+router.beforeEach((to, from, next) => {
+  if (['/login', '/register'].includes(to.fullPath) || Storage.get('token') != null) {
+    next()
+  } else {
+    next('/')
+  }
+})
+
+export default router
