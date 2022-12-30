@@ -54,7 +54,7 @@ import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElForm, ElFormItem, ElInput, ElButton, ElSelect, ElOption } from 'element-plus'
 import { addUser } from '@/api'
-import { sex as userSexes, type as userTypes } from '@/data/user'
+import { userSexes, userTypes } from '@/data/user'
 import type User from '@/model/User'
 import { ErrorMessage, SuccessMessage } from '@/util/Message'
 
