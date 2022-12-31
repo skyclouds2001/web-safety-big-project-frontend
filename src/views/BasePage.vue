@@ -21,23 +21,11 @@
 
 <script lang="ts" setup>
 import { ElConfigProvider, ElContainer, ElMain, ElHeader, ElFooter, ElAside } from 'element-plus'
-import { useRouter } from 'vue-router'
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import PageHeader from '@/components/PageHeader.vue'
 import SideBar from '@/components/SideBar.vue'
 import PageFooter from '@/components/PageFooter.vue'
 import titleStore from '@/store/title'
-import Storage from '@/util/Storage'
-
-const router = useRouter()
-
-if (router.currentRoute.value.fullPath === '/') {
-  if (Storage.get('token')) {
-    setTimeout(() => router.push('/scenery-spot'), 1000)
-  } else {
-    setTimeout(() => router.push('/login'), 1000)
-  }
-}
 
 titleStore.updateTitle('')
 </script>
